@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warkop Siholung</title>
+    <script>
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            this.blur(); // Menghapus fokus setelah klik
+        });
+    });
+</script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
