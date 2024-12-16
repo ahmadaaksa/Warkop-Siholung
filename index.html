@@ -12,13 +12,38 @@
             background-color: #f9f9f9;
         }
 
-        header {
-            background-color: #6F4F29;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-        }
+        /* Header dengan Hero */
+header.hero {
+    background-image: url('ws2.jpg'); /* Ganti dengan path gambar hero */
+    background-size: cover;         /* Pastikan gambar mengisi area */
+    background-position: center;    /* Pusatkan gambar */
+    background-attachment: fixed;   /* Gambar tetap saat di-scroll */
+    height: 400px;                  /* Tinggi header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+header .overlay {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header.hero h1 {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
 
         nav {
             display: flex;
@@ -35,19 +60,6 @@
 
         nav a:hover {
             background-color: #6F4F29;
-        }
-
-        .hero {
-            background-image: url(ws2.jpg);
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: fixed;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-size: 36px;
         }
 
         .container {
@@ -259,18 +271,18 @@
     </style>
 </head>
 <body>
-    <header>
-        Warkop Siholung
+    <header class="hero">
+        <div class="overlay">
+            <h1>Warkop Siholung</h1>
+        </div>
     </header>
+    
     <nav>
         <a href="#home">Beranda</a>
         <a href="#menu">Menu</a>
         <a href="#contact">Kontak</a>
     </nav>
 
-    <div class="hero">
-        
-    </div>
 
     <div id="slogan" class="container">
         <p>"Menikmati setiap tegukan, merasakan setiap suapan, di Warkop Siholong."</p>
@@ -326,7 +338,7 @@
         <div class="maps-link">
             <a href="https://maps.app.goo.gl/XypqF73TU5hm7jWJ8" target="_blank">
                 <img src="gm.png" alt="Google Maps" class="maps-icon">
-                <span>Lokasi Warkop Siholung</span>
+                <span>Lokasi Warkop Siholong</span>
             </a>
         </div>
     </div>
@@ -336,7 +348,7 @@
     </div>
 
     <footer>
-        &copy; 2024 Warkop Siholung.
+        &copy; 2024 Warkop Siholung. All Rights Reserved.
     </footer>
 </body>
 </html>
