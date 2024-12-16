@@ -51,16 +51,24 @@ header.hero p {
             background-color: #333;
         }
 
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
 
-        nav a:hover {
-            background-color: #6F4F29;
-        }
+nav a:hover {
+    background-color: #6F4F29;
+}
+
+nav a:focus {
+    background-color: #6F4F29; /* Warna saat diklik */
+    color: #fff;               /* Warna teks saat fokus */
+    outline: none;             /* Menghilangkan border fokus default */
+}
+
 
         .container {
             padding: 20px;
