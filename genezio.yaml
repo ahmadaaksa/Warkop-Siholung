@@ -1,3 +1,6 @@
 name: Warkop-Siholung
 region: us-east-1
+frontend:
+  build: echo "No build step needed"  # Tidak ada build yang diperlukan
+  serve: python3 -m http.server 8080  # Menyajikan file HTML dengan server lokal
 yamlVersion: 2
