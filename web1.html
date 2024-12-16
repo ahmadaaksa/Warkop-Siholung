@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warkop Siholung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #6F4F29;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #6F4F29;
+        }
+
+        .hero {
+            background-image: url(ws.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 36px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .menu {
+    display: flex;
+    flex-direction: column; /* Membuat item menu bersusun vertikal */
+    gap: 20px; /* Jarak antar item menu */
+}
+
+.menu-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column; /* Memastikan gambar dan teks tersusun secara vertikal */
+}
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+    width: 100%; /* Membuat gambar mengisi lebar kontainer */
+    height: 200px; /* Ukuran tetap pada tinggi */
+    object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak proporsi */
+
+}
+        .menu-item h3 {
+            padding: 10px;
+            margin: 0;
+            font-size: 18px;
+            background-color: #6F4F29;
+            color: white;
+            text-align: center;
+        }
+
+        .menu-item p {
+            padding: 10px;
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Kontak */
+/* Kontak */
+#contact {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+}
+#contact:hover {
+            transform: translateY(-5px);
+        }
+
+#contact h2 {
+    font-size: 28px;
+    color: #6F4F29;
+    margin-bottom: 20px;
+}
+#contact p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-link  {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-link span {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+
+/* Google Maps */
+#google-maps {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+}
+#google-maps:hover {
+            transform: translateY(-5px);
+        }
+
+#google-maps h2 {
+    font-size: 28px;
+    color: #6F4F29;
+    margin-bottom: 20px;
+}
+
+#google-maps p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.maps-link {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.maps-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.maps-link a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.maps-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.maps-link span {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.maps-link a:hover {
+    color: #6F4F29;
+}
+
+#slogan {
+    color: #6F4F29;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+#slogan p {
+    font-size: 17px;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        Warkop Siholung
+    </header>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <div class="hero">
+        
+    </div>
+
+    <div id="slogan" class="container">
+        <p>"Menikmati setiap tegukan, merasakan setiap suapan, di Warkop Siholong."</p>
+    </div>
+    
+
+    <div id="menu" class="container">
+        <h2>Menu Kami</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="mk.jpg" alt="Mie Kuah">
+                <h3>Mie Kuah</h3>
+                <p>"Hangat dan kaya rasa, mie kuah ini siap memanjakan setiap suapan."</p>
+            </div>
+            <div class="menu-item">
+                <img src="mg.jpg" alt="Mie Goreng">
+                <h3>Mie Goreng</h3>
+                <p>"Mie Goreng gurih, penuh rempah, sempurna di setiap gigitan."</p>
+            </div>
+            <div class="menu-item">
+                <img src="kh.jpg" alt="Kopi Hitam">
+                <h3>Kopi Hitam</h3>
+                <p>"Kopi Hitam, pahit yang elegan, untuk setiap momen yang penuh makna."</p>
+            </div>
+            <div class="menu-item">
+                <img src="ks.jpg" alt="Kopi Susu">
+                <h3>Kopi Susu</h3>
+                <p>"Kopi Susu, perpaduan sempurna antara manis dan pahit yang menenangkan."</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact" class="container">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami melalui WhatsApp atau melalui informasi berikut:</p>
+        <div class="contact-link">
+            <a href="tel:+628656114378" target="_blank">📞+62 85656114378</a>
+        </div>
+        <div class="contact-link">
+            <a href="https://wa.me/6285656114378" target="_blank">
+                <img src="wa.png" alt="WhatsApp" class="whatsapp-icon">
+                <span>Hubungi via WhatsApp</span>
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    <div id="google-maps" class="container">
+        <h2>Temukan Kami di Google Maps</h2>
+        <p>Lokasi kami dapat Anda temukan melalui Google Maps di bawah ini:</p>
+        <div class="maps-link">
+            <a href="https://maps.app.goo.gl/XypqF73TU5hm7jWJ8" target="_blank">
+                <img src="gm.png" alt="Google Maps" class="maps-icon">
+                <span>Lokasi Warkop Siholong</span>
+            </a>
+        </div>
+    </div>
+    
+
+
+    </div>
+
+    <footer>
+        &copy; 2024 Warkop Siholung. All Rights Reserved.
+    </footer>
+</body>
+</html>
