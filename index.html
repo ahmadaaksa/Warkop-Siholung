@@ -131,99 +131,44 @@ nav a:focus {
             width: 100%;
         }
         /* Kontak */
-/* Kontak */
-#contact {
+
+/* Kontainer untuk Kontak dan Lokasi - Bersusun ke Bawah */
+.contact-container {
+    display: block; /* Menyusun elemen secara vertikal */
+    margin: 30px auto;
+    max-width: 500px; /* Lebar maksimum agar tampak rapi */
+}
+
+.contact-box {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    font-family: Arial, sans-serif;
-}
-#contact:hover {
-            transform: translateY(-5px);
-        }
-
-#contact h2 {
-    font-size: 28px;
-    color: #6F4F29;
-    margin-bottom: 20px;
-}
-#contact p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.contact-link  {
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.contact-link a {
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-.whatsapp-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-}
-
-.contact-link span {
-    font-size: 18px;
-    line-height: 1.5;
-}
-.whatsapp-icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
-}
-
-
-/* Google Maps */
-#google-maps {
-    background-color: #fff;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    font-family: Arial, sans-serif;
+    margin-bottom: 20px; /* Jarak antar box */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-#google-maps:hover {
-            transform: translateY(-5px);
-        }
 
-#google-maps h2 {
-    font-size: 28px;
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box h2 {
     color: #6F4F29;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #555;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
-#google-maps p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
+.contact-link,
 .maps-link {
     background: #fff;
+    margin-bottom: 20px;
     border-radius: 8px;
     padding: 25px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -232,35 +177,32 @@ nav a:focus {
     align-items: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.contact-link:hover,
 .maps-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+.contact-link img,
+.maps-link img {
+    width: 25px;
+    height: 25px;
+}
 
+.contact-link a,
 .maps-link a {
-    color: #333;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-.maps-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-}
-
-.maps-link span {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.maps-link a:hover {
     color: #6F4F29;
+    font-weight: bold;
 }
+
+.contact-link a:hover,
+.maps-link a:hover {
+    color: #333;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
 
 #slogan {
     color: #6F4F29;
@@ -344,33 +286,35 @@ nav a:focus {
     </div>
 
 
-    <div id="contact" class="container">
-        <h2>Kontak Kami</h2>
-        <p>Hubungi kami melalui WhatsApp atau melalui informasi berikut:</p>
-        <div class="contact-link">
-            <a href="tel:+628656114378" target="_blank">📞+62 85656114378</a>
+    <div class="contact-container">
+        <!-- Kontak Kami -->
+        <div id="contact" class="contact-box">
+            <h2>Kontak Kami</h2>
+            <p>Hubungi kami melalui WhatsApp atau melalui informasi berikut:</p>
+            <div class="contact-link">
+                <a href="tel:+628656114378" target="_blank">📞 +62 85656114378</a>
+            </div>
+            <div class="contact-link">
+                <a href="https://wa.me/6285656114378" target="_blank">
+                    <img src="wa.png" alt="WhatsApp" class="whatsapp-icon">
+                    <span>Hubungi via WhatsApp</span>
+                </a>
+            </div>
         </div>
-        <div class="contact-link">
-            <a href="https://wa.me/6285656114378" target="_blank">
-                <img src="wa.png" alt="WhatsApp" class="whatsapp-icon">
-                <span>Hubungi via WhatsApp</span>
-            </a>
+    
+        <!-- Google Maps -->
+        <div id="google-maps" class="contact-box">
+            <h2>Temukan Kami di Google Maps</h2>
+            <p>Lokasi kami dapat Anda temukan melalui Google Maps di bawah ini:</p>
+            <div class="maps-link">
+                <a href="https://maps.app.goo.gl/XypqF73TU5hm7jWJ8" target="_blank">
+                    <img src="gm.png" alt="Google Maps" class="maps-icon">
+                    <span>Lokasi Warkop Siholung</span>
+                </a>
+            </div>
         </div>
     </div>
     
-    
-    <div id="Location" class="container">
-    <div id="google-maps" class="container">
-        <h2>Temukan Kami di Google Maps</h2>
-        <p>Lokasi kami dapat Anda temukan melalui Google Maps di bawah ini:</p>
-        <div class="maps-link">
-            <a href="https://maps.app.goo.gl/XypqF73TU5hm7jWJ8" target="_blank">
-                <img src="gm.png" alt="Google Maps" class="maps-icon">
-                <span>Lokasi Warkop Siholung</span>
-            </a>
-        </div>
-    </div>
-    </div>
     
 
 
