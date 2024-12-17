@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warkop Siholung</title>
-
+    <link rel="icon" type="jpg" href="ws2.jpg">
     <style>
+
+
+
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -272,6 +276,17 @@ nav a:focus {
     line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menu vertikal di mobile */
+    }
+    nav a {
+        text-align: left;      /* Align teks ke kiri */
+        padding: 10px 20px;   /* Sesuaikan padding */
+    }
+}
+
+
 
 
     </style>
@@ -304,6 +319,13 @@ nav a:focus {
                 <h3>Mie Kuah</h3>
                 <p>"Hangat dan kaya rasa, mie kuah ini siap memanjakan setiap suapan."</p>
             </div>
+            <div class="menu-item">
+                <img src="mktc.jpg" alt="Mie Kuah Telur Ceplok">
+                <h3>Mie Kuah Telur Ceplok</h3>
+                <p>"Hangat dan kaya rasa, mie kuah ini siap memanjakan setiap suapan."</p>
+
+            </div>
+
             <div class="menu-item">
                 <img src="mg.jpg" alt="Mie Goreng">
                 <h3>Mie Goreng</h3>
